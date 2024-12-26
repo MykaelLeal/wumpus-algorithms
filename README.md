@@ -15,15 +15,47 @@
 
 ## 🛠️ Estrátegias e Algoritmos de busca utilizados
 
-<ol>
-      <li>
-        <strong>Menor Distância: </strong>Determina a menor distância até o tesouro.
-        <p><strong>Algoritmo de busca presente:</strong> Método Guloso.</p>
-      </li>
-      <li><strong>Força Bruta:</strong> Explora todas as possibilidades até encontrar o caminho correto.</li>
-      <li><strong>Programação Dinâmica:</strong> Resolve o problema otimizando subproblemas para evitar repetições.</li>
-      <li><strong>Dividir para Conquistar:</strong> Divide o cenário em partes menores e resolve recursivamente.</li>
- </ol>
+#### 1. Método Guloso
+**Estratégia**: Menor distância (**Shortest Distance**).
+
+  - Determina a menor distância que o robô deve percorrer para chegar ao tesouro.
+  - A lógica utiliza a distância de Manhattan para priorizar o ponto mais próximo do tesouro.
+  - Faz a verficação dos caminhos disponíveis para evitar bloqueios.
+  - O algoritmo assegura que o robô não escolha posições onde todos os caminhos futuros estejam bloqueados.
+
+##### Vantagens:
+  - **Eficiência Computacional:** Avalia apenas as opções viáveis localmente, economizando recursos.
+  - **Gestão de Bloqueios:** Identifica cenários bloqueados e interrompe o processamento com mensagens de erro, evitando loops infinitos.
+  - **Flexibilidade:** Funciona bem em mapas dinâmicos ou estáticos.
+
+##### Desvantagens:
+  - **Otimização Local vs. Global:** Pode não encontrar o caminho ideal em termos globais.
+  - **Dependência do Cenário:** Eficiência depende da distribuição de obstáculos e do tesouro.
+  - **Erros em Caso de Empates:** Em situações com múltiplos caminhos de mesma distância, a estratégia escolhe arbitrariamente o primeiro na lista.
+
+---
+
+#### 2. Método Guloso
+**Estratégia**: Menor número de obstáculos (**Fewer Obstacles**).
+
+  -  Seleciona o ponto adjacente com o menor número de obstáculos.
+  -  Evita pontos bloqueados e prioriza caminhos que sejam mais seguros ou eficientes para o deslocamento.
+    
+ ##### Vantagens:
+   - **Simplicidade de implementação:** Cada decisão é feita com base em informações locais, sem necessidade de avaliar todo o mapa.
+   - **Baixa complexidade computacional:** Avalia apenas os vizinhos imediatos, o que é eficiente em tempo de execução.
+
+##### Desvantagens:
+   - **Local vs. Global:** Como decisões locais são priorizadas, o algoritmo pode não encontrar o caminho globalmente mais eficiente.
+   - **Dependência da Configuração do Cenário:** O desempenho é impactado por como os obstáculos e tesouros estão distribuídos.
+
+___
+
+
+
+ 
+
+
 
 
 
