@@ -16,7 +16,7 @@
 ## 🛠️ Estrátegias e Algoritmos de busca utilizados
 
 #### 1. Método Guloso
-**Estratégia**: Menor distância (**Shortest Distance**).
+**Estratégia:** Menor distância (**Shortest Distance**).
 
   - Determina a menor distância que o robô deve percorrer para chegar ao tesouro.
   - A lógica utiliza a distância de Manhattan para priorizar o ponto mais próximo do tesouro.
@@ -36,7 +36,7 @@
 ---
 
 #### 2. Método Guloso
-**Estratégia**: Menor número de obstáculos (**Fewer Obstacles**).
+**Estratégia:** Menor número de obstáculos (**Fewer Obstacles**).
 
   -  Seleciona o ponto adjacente com o menor número de obstáculos.
   -  Evita pontos bloqueados e prioriza caminhos que sejam mais seguros ou eficientes para o deslocamento.
@@ -50,6 +50,66 @@
    - **Dependência da Configuração do Cenário:** O desempenho é impactado por como os obstáculos e tesouros estão distribuídos.
 
 ___
+
+#### 3. Votação
+**Estratégia:** Voting.
+
+  - **A estratégia Voting utiliza a seguinte lógica:**
+
+    <p style="text-align: justify;">É uma técnica híbrida, que combina várias estratégias de tomada de decisão utilizando o método de votação. 
+      Assim, cada estratégia fornece uma perspectiva complementar para avaliar as opções disponíveis. Então, a opção mais votada, é a utilizada.</p>
+  
+     - **Sistema de Votação:**
+         - Cada estratégia retorna um ponto como melhor opção.
+         - Os pontos escolhidos pelas três estratégias são contabilizados.
+         - O ponto com maior número de votos é selecionado como o próximo passo.
+         - Caso dois ou mais pontos tenham o mesmo número de votos, uma lógica alternativa pode ser implementada para decidir o desempate.
+
+    ##### Vantagens:
+    - **Flexibilidade:** Permite a integração de múltiplos critérios sem priorizar um sobre o outro.
+    - **Robustez:** Reduz a probabilidade de erros ao combinar diferentes estratégias.
+    - **Escalabilidade:** Outras estratégias podem ser adicionadas ao sistema de votação sem grandes alterações no código.
+      
+    ##### Desvantagens:
+     - **Dependência de Estratégias:** A eficácia do sistema depende da qualidade das estratégias individuais utilizadas.
+     - **Complexidade Computacional:** O cálculo combinado de várias heurísticas pode aumentar o tempo de execução.
+
+---
+
+#### 4. Busca Binária
+
+  **Estratégia:** Busca em Profundidade - DSF (
+      - É baseada em árvores binárias para a movimentação do robô.
+      - É construída uma árvore binária para representar o mapa.
+      - Realiza uma busca em profundidade (DFS) para encontrar o caminho até o tesouro e decide o próximo movimento do robô.
+
+##### Vantagens:
+  - **Representação Estrutural:** A árvore binária permite uma visão organizada do mapa.
+  - **Busca Otimizada:** A DFS reduz o espaço de busca ao explorar apenas caminhos viáveis.
+    
+##### Desvantagens:
+ - **Escalabilidade:** Em mapas grandes, a árvore binária pode consumir muita memória.
+ - **Eficiência:** A DFS explora caminhos sequencialmente, o que pode ser lento em mapas complexos.
+
+---
+
+#### 5. Sort
+
+
+
+---
+
+## 📂 Estrutura do Código
+
+
+
+
+
+           
+         
+
+
+
 
 
 
