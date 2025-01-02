@@ -93,15 +93,31 @@ ___
 
 ---
 
-#### 5. Sort
+## 🏃 Como Executar o Projeto
 
+#### 1️⃣ Abra o Projeto na IDE:
 
+   1. Certifique-se de que você tem uma IDE instalada (Eclipse, IntelliJ IDEA ou VS Code com extensão para Java).
+  
+   2. Importe o projeto:
+      
+   - **Eclipse:** Selecione **File > Open Projects from File System** e escolha a pasta do projeto.
+   - **IntelliJ IDEA:** Clique em **File > Open** e selecione a pasta do projeto.
+   - **Visual Studio Code:** Abra a pasta do projeto diretamente. 
+   
+  #### 2️⃣ Escolha a Estratégia:
+  
+   1. Selecione o package **game** e abra o arquivo **Game.java**.
+   2. Na linha **this.player = new Player(new Sort())** escolha a estrátegia como parâmetro para utilizá-la.
+     
+  #### 3️⃣ Execute o Arquivo Principal:
+
+  1. Selecione o package **main** e abra o arquvivo **Execute.java**.
+  2. Clique com o botão direito no arquivo e selecione **Run** ou **Run Main**.
 
 ---
 
-## 📂 Estrutura do Código
-
-
+### 🎮 Aproveite o jogo! Desfrute de cada estratégia, supere os desafios e conquiste o tesouro! Boa sorte, aventureiro! 🏆
 
 
 
